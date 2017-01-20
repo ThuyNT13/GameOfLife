@@ -6,4 +6,8 @@ Each generation switches cells on or off depending on the state of the cells tha
 
 3. **Birth**: if the current cell is off and the count is exactly 3 neighbors, the current cell is switched on.
 
-from [MathWorld](http://mathworld.wolfram.com)
+from [Wolfram MathWorld](http://mathworld.wolfram.com)
+
+##
+
+try HTML Canvas to generate grid
