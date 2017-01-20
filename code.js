@@ -24,11 +24,22 @@ function createTable() {
         // coordinates
         cell.setAttribute("id", i + "_" + j);
         cell.setAttribute("class", "dead");
+        cell.onclick = cellClickHandler;
         row.appendChild(cell);
     }
     table.appendChild(row);
   }
   gridContainer.appendChild(table);
+}
+
+function cellClickHandler() {
+  var classes = this.getAttribute("class");
+
+  if (classes.indexOf("live") > -1) {
+    this.setAttribute("class", "dead");
+  } else {
+    this.setAttribute("class", "live");
+  }
 }
 
 // start everything
