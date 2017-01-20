@@ -62,7 +62,7 @@ function cellClickHandler() {
 
   var classes = this.getAttribute("class");
 
-  // refactored differently? 
+  // refactored differently?
   if (classes.indexOf("live") > -1) {
     this.setAttribute("class", "dead");
     grid[row][col] = 0;
