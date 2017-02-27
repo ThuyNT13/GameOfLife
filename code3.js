@@ -3,7 +3,7 @@ var cols = 24;
 
 var playing = false;
 
-// can this be refactored
+// can 9-18 be refactored
 var grid = new Array(rows);
 var nextGrid = new Array(rows);
 
@@ -13,6 +13,7 @@ function initializeGrids() {
     nextGrid[i] = new Array(cols);
   }
 }
+
 // defaults cells to 0 - dead
 function resetGrids() {
   for (var i=0; i<rows; i++) {
@@ -45,7 +46,7 @@ function createTable() {
 
     for (var j=0; j<cols; j++) {
       var cell = document.createElement("td");
-      cell.setAttribute("id", i + "_" +j);
+      cell.setAttribute("id", i + "_" + j);
       cell.setAttribute("class", "dead");
       cell.onclick = cellClickHandler;
       row.appendChild(cell);
@@ -136,27 +137,30 @@ function countNeighbors(row, col) {
   var count = 0;
 
   if (row-1 >= 0) {
-    if (grid[row][col] == 1) count++;
+    if (grid[row-1][col] == 1) count++;
   }
   if (row-1 >= 0 && col-1 >= 0) {
-    if (grid[row][col] == 1) count ++;
+    if (grid[row-1][col-1] == 1) count ++;
   }
-  if (row-1 >= 0 && col+1 >= 1) {
-    if (grid[row][col] == 1) count ++;
+  if (row-1 >= 0 && col+1 < cols) {
+    if (grid[row-1][col+1] == 1) count ++;
   }
 
   if (col-1 >= 0) {
-    if (grid[row][col] == 1) count ++;
+    if (grid[row][col-1] == 1) count ++;
   }
-  if (col+1 >= 0) {
-    if (grid[row][col] == 1) count ++;
+  if (col+1 < cols) {
+    if (grid[row][col+1] == 1) count ++;
   }
 
-  if (row+1 >= 0 && col-1 >= 0) {
-    if (grid[row][col] == 1) count++;
+  if (row+1 < rows) {
+    if (grid[row+1][col] == 1) count++;
   }
-  if (row+1 >= 0 && col+1 >= 0) {
-    if (grid[row][col] == 1) count++;
+  if (row+1 < rows && col-1 >= 0) {
+    if (grid[row+1][col-1] == 1) count++;
+  }
+  if (row+1 < rows && col+1 < cols) {
+    if (grid[row+1][col+1] == 1) count++;
   }
 
   return count;
