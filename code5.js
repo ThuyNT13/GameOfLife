@@ -4,7 +4,7 @@ var cols = 24;
 var playing = false;
 
 var timer;
-var delayTime = 100;
+var reproductionTime = 500;
 
 var grid = new Array(rows);
 var nextGrid = new Array(rows);
@@ -119,32 +119,16 @@ function startButtonHandler() {
 
 function clearButtonHandler() {
   console.log("Clear the game; stop playing, clear the grid");
-
   playing = false;
   var startButton = document.getElementById("start");
   startButton.innerHTML = "start";
-  clearTimeout(timer);
-
-  // research difference between nodelist and arrays
-  var cellsList = document.getElementsByClassName("live");
-  var cellsArray = [];
-
-  for (var i=0; i<cellsList.length; i++) {
-    cellsArray.push(cellsList[i]);
-  }
-
-  for (var i=0; i<cellsArray.length; i++) {
-    cellsArray[i].setAttribute("class", "dead");
-  }
-
-  resetGrids();
 }
 
 function play() {
   computeNextGen();
 
   if (playing) {
-    timer = setTimeout(play, delayTime);
+    timer = setTimeout(play, reproductionTime);
   }
 }
 
