@@ -1,5 +1,5 @@
-var rows = 75;
-var cols = 75;
+var rows = 100;
+var cols = 100;
 
 var playing = false;
 
@@ -168,7 +168,6 @@ function play() {
   }
 }
 
-// game logic
 
 function computeNextGen() {
   for (var i=0; i<rows; i++) {
@@ -180,6 +179,7 @@ function computeNextGen() {
   updateView();
 }
 
+// game logic
 function applyRules(row, col) {
   var numNeighbors = countNeighbors(row, col);
   if (grid[row][col] == 1) {
