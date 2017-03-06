@@ -1,4 +1,7 @@
-Each generation switches cells on or off depending on the state of the cells that surround it.
+Beta-tester for [WickedlySmart's projects](http://www.wickedlysmart.com/projects/) so I got to have fun with 
+
+Each generation switches cells on or off depending on the state of the cells that
+surround it.
 
 1. **Death**: if the count is less than 2 or greater than 3 neighbors, the current cell is switched off.
 
@@ -10,4 +13,10 @@ from [Wolfram MathWorld](http://mathworld.wolfram.com)
 
 ##
 
-try HTML Canvas to generate grid
+D3.js!
+
+Research difference between node list and arrays
+
+consider adding color to various "stages of life".
+
+add buttons for extra algorithmic patterns
