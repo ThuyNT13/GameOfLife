@@ -1,3 +1,21 @@
+function cellClickHandler() {
+  var rowCol = this.id.split("_");
+  var row = rowCol[0];
+  var col = rowCol[1];
+
+  var classes = this.getAttribute("class");
+
+  if (classes.indexOf("live") > -1) {
+    this.setAttribute("class", "dead");
+    grid[row][col] = 0;
+  } else {
+    this.setAttribute("class", "live");
+    grid[row][col] = 1;
+  }
+}
+
+// Control buttons
+
 function setUpControlButtons() {
   var startButton = document.getElementById("start");
   startButton.onclick = startButtonHandler;
@@ -56,21 +74,5 @@ function randomButtonHandler() {
         grid[i][j] = 1;
       }
     }
-  }
-}
-
-function cellClickHandler() {
-  var rowCol = this.id.split("_");
-  var row = rowCol[0];
-  var col = rowCol[1];
-
-  var classes = this.getAttribute("class");
-
-  if (classes.indexOf("live") > -1) {
-    this.setAttribute("class", "dead");
-    grid[row][col] = 0;
-  } else {
-    this.setAttribute("class", "live");
-    grid[row][col] = 1;
   }
 }
