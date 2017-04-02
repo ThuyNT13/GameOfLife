@@ -17,3 +17,5 @@ The challenge is to find [patterns](http://www.conwaylife.com/wiki/Conway%27s_Ga
 2. consider adding color to further "stages of life".
 
 3. add buttons to select algorithmic patterns
+
+4. button to slowly step-through generations
