@@ -1,7 +1,7 @@
 Beta-tested [WickedlySmart's projects](http://www.wickedlysmart.com/projects/) so I got to have fun with algorithms and data structures in the **Game of Life** (not the Hasbro board game). When mathematician John Horton Conway introduced his game, a whole new field of mathematical research was born, _cellular automata_.
 
 The Game of Life consists of a two-dimensional grid of cells, each of whose state is either _live_ (on) or _dead_ (off). As a zero-player game, the evolution of the game progresses dependent upon the state of the _neighbors_ of a particular cell.
- _Neighbors_ are any other cells that are horizontally, vertically or diagonally adjacent to a particular cell. The rules that dictate whether or not a cell lives or dies are as follows:
+ _Neighbors_ are any cells that are horizontally, vertically or diagonally adjacent to a particular cell. The rules that dictate whether or not a cell lives or dies are as follows:
  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**1. Birth**: if the current cell is _dead_ and the count is _3 neighbors_, it is switched on to _live_.
 
