@@ -8,7 +8,7 @@ The game is a grid of cells which are either _live_ (on) or _dead_ (off). Each g
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**3. Death**: if the current cell is _live_ and the neighbor count is _less than 2_ (underpopulation) or _greater than 3_ (overpopulation), it is switched off to _dead_.
 
-The challenge is to find [patterns](http://www.conwaylife.com/wiki/Conway%27s_Game_of_Life#Patterns) that will generate life. Ten cells in a row (or column) produces an explosion of life. A favorite is the glider which crawls on a diagonal path across the grid to the other side. And then there's the [Glider Gun](http://www.conwaylife.com/wiki/Gun).
+The challenge is to find [patterns](http://www.conwaylife.com/wiki/Conway%27s_Game_of_Life#Patterns) that will generate life. Ten consecutive _live_ cells in a row (horizontally) or in a column (vertically) produces an explosion of life. A favorite is the glider which crawls on a diagonal path across the grid to the other side. And then there's the [Glider Gun](http://www.conwaylife.com/wiki/Gun).
 
 ## Next Steps
 
